@@ -11,9 +11,11 @@
 }
 
 body {
-    background-color: var(--main_background);
+    background: linear-gradient(60deg, #000000, #201e1e);
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    min-height: 100vh;
 }
 
 input {
@@ -21,10 +23,10 @@ input {
     height: 60px;
 
     outline: none;
-    background-color: #79797924;
+    background-color: #313030;
     padding: 10px;
 
-    border: 2px solid #ffffff25;
+    border: 2px solid #6b6969;
     border-radius: 6px;
     color: white;
     font-size: x-large;
@@ -33,11 +35,19 @@ input {
 }
 
 input:hover {
-    border-color: #ffffff4a;;
+    border-color: #00e1ff;
 }
 
 input:focus {
-    border-color: #fff;
+    border-color: #00e1ff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #313030 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 form {
@@ -50,7 +60,7 @@ form {
 button {
     outline: none;
     border: none;
-    background-color: var(--base_color);
+    background: linear-gradient(60deg, var(--base_color), #253e23);
     color: var(--main_background);
 
     font-size: x-large;
