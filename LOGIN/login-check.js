@@ -9,7 +9,7 @@ const verifyBtn = document.getElementById('verify-btn');
 if (verifyBtn) {
     verifyBtn.addEventListener('click', async (event) => {
         event.preventDefault();
-        
+
         const code = codeInput.value.trim();
         const userEmail = localStorage.getItem('savedEmailForLogin');
 
@@ -30,6 +30,6 @@ if (verifyBtn) {
 
 supabaseClient.auth.onAuthStateChange((event, session) => {
     if (event === 'SIGNED_IN' && session) {
-        window.location.href = '/MAIN/main.html';
+        window.location.href = '/LOGIN/return.html';
     }
 });
