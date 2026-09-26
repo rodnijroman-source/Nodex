@@ -64,6 +64,7 @@ button {
     cursor: pointer;
 
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
     transition: background-color 0.1s ease-out, transform 0.1s ease-out;
 }
