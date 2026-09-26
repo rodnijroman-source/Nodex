@@ -7,8 +7,10 @@ const codeInput = document.getElementById('code-input');
 const verifyBtn = document.getElementById('verify-btn');
 
 if (verifyBtn) {
-    verifyBtn.addEventListener('click', async () => {
-        const code = codeInput.value;
+    verifyBtn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        
+        const code = codeInput.value.trim();
         const userEmail = localStorage.getItem('savedEmailForLogin');
 
         const {data:{session}, error} = await supabaseClient.auth.verifyOtp({
