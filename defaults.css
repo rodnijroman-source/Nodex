@@ -67,7 +67,10 @@ form {
 button {
     outline: none;
     border: none;
-    background: linear-gradient(60deg, var(--base_color), #253e23);
+
+    background: linear-gradient(60deg, var(--base_color), #468641, #2f782a, var(--base_color));
+    background-size: 150% 150%;
+
     color: var(--main_background);
 
     font-size: x-large;
@@ -76,19 +79,20 @@ button {
     width: 300px;
     height: 40px;
 
-    border-radius: 6px;
+    border-radius: 20px;
 
     cursor: pointer;
 
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
 
-    transition: background-color 0.1s ease-out, transform 0.1s ease-out;
+    transition: transform 0.1s ease-out;
+    animation: gradient-animation-out 0.5s ease forwards;
 }
 
 button:hover {
-    background-color: var(--base_color_hover);
     transform: scale(1.02);
+    animation: gradient-animation-in 0.5s ease forwards;
 }
 
 button:active {
@@ -141,6 +145,23 @@ a {
     }
 }
 
+@keyframes gradient-animation-in {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-animation-out {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 @view-transition {
