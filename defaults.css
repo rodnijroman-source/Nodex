@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main_background: #0f0e0e;
+    --border_background: #908c8c1e;
+    --base_color: #2bae4e;
+    --base_color_hover: #34ca5c;
+}
+
+body {
+    background-color: var(--main_background);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    width: 300px;
+    height: 60px;
+
+    outline: none;
+    background-color: #79797924;
+    padding: 10px;
+
+    border: 2px solid #ffffff25;
+    border-radius: 6px;
+    color: white;
+    font-size: x-large;
+
+    transition: border-color 0.1s ease-out;
+}
+
+input:hover {
+    border-color: #ffffff4a;;
+}
+
+input:focus {
+    border-color: #fff;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: var(--base_color);
+    color: var(--main_background);
+
+    font-size: x-large;
+    font-weight: bolder;
+
+    width: 300px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: background-color 0.1s ease-out, transform 0.1s ease-out;
+}
+
+button:hover {
+    background-color: var(--base_color_hover);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(1.0);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.base-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-self: center;
+    align-items: center;
+
+    min-width: 400px;
+    min-height: 400px;
+
+    margin-top: 80px;
+
+    background-color: var(--border_background);
+    border-radius: 6px;
+    border: 2px solid #ffffff06;
+
+    gap: 20px;
+    padding: 20px;
+
+    box-shadow: 0 0 5px 0 #ffffff15;
+}
+
+.faded-in {
+    animation: fade-in-animation 1s ease-out;
+}
+
+
+
+@keyframes fade-in-animation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.5s;
+}
