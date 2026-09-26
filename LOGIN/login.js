@@ -31,6 +31,8 @@ loginForm.addEventListener('submit', async function(event) {
         console.error("Ошибка:", error.message);
         alert("Failed: " + error.message);
     } else {
+        localStorage.setItem('savedEmailForLogin', userEmail);
+        
         emailInput.value = '';
         window.location.href = '/LOGIN/login-check.html';
     }

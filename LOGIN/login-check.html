@@ -14,12 +14,18 @@
         <h1>Check your email</h1>
 
         <dotlottie-wc 
-            src="/res/animations/Contact us.lottie" 
-            autoplay 
-            loop 
+            src="/res/animations/Contact us.lottie"
+            autoplay
+            loop
             style="width: 300px; height: 300px;"
             class="faded-in">
         </dotlottie-wc>
+
+        <form id="confirm-form">
+            <h3>Enter the 6-digit code.</h3>
+            <input type="text" id="code-input" placeholder="123456">
+            <button id="verify-btn">Verify</button>
+        </form>
     </div>
 
     <script src="/LOGIN/login-check.js"></script>
