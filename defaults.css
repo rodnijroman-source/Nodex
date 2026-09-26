@@ -7,6 +7,7 @@
     --border_background: #908c8c1e;
     --base_color: #2bae4e;
     --base_color_hover: #34ca5c;
+    --base_color_darker: #0e0d0de8;
 }
 
 body {
@@ -99,7 +100,7 @@ a {
     gap: 20px;
     padding: 20px;
 
-    box-shadow: 0 0 5px 0 #ffffff15;
+    box-shadow: none;
 }
 
 .faded-in {
