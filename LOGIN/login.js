@@ -31,11 +31,9 @@ loginForm.addEventListener('submit', async function(event) {
         console.error("Ошибка:", error.message);
         alert("Failed: " + error.message);
     } else {
-        localStorage.setItem('savedEmailForLogin', userEmail);
-        
         emailInput.value = '';
         passwordInput.value = '';
 
-        window.location.href = '/LOGIN/login-check.html';
+        window.location.href = '/LOGIN/return.html';
     }
 });

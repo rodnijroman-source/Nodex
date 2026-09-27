@@ -7,21 +7,23 @@
 
     <link rel="stylesheet" href="/defaults.css">
     <link rel="icon" type="image/png" href="/res/Nodex_Logo.png">
-
+    
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <div class="base-container" style="background-color: transparent; border: none; box-shadow: none;">
-        <h1>Check your email</h1>
+    <div class="base-container">
+        <h1>You are registered</h1>
 
         <dotlottie-wc 
-            src="/res/animations/Contact us.lottie"
+            src="/res/animations/Verification.lottie"
             autoplay
-            loop
             style="width: 300px; height: 300px;"
             class="faded-in">
         </dotlottie-wc>
+
+        <button id="login-btn">Login</button>
     </div>
+
+    <script src="reg-complete.js"></script>
 </body>
 </html>

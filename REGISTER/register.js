@@ -34,8 +34,6 @@ registerForm.addEventListener('submit', async function(event) {
         console.error("Register Fail: ", error.message);
         alert("Error: " + error.message);
     } else {
-        localStorage.setItem('savedEmailForLogin', userEmail);
-
         emailInput.value = '';
         passwordInput.value = '';
 
