@@ -3,7 +3,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_cklQ2YCM-Pq14ySFn8gQWQ_batNePIi';
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
 const emailInput = document.getElementById('email-input');
 const passwordInput = document.getElementById('password-input');
 
@@ -16,23 +16,26 @@ async function checkActiveSession() {
 
 checkActiveSession();
 
-loginForm.addEventListener('submit', async function(event) {
+registerForm.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const userEmail = emailInput.value;
     const userPassword = passwordInput.value;
 
-    const {data, error} = await supabaseClient.auth.signInWithPassword({
+    const {data, error} = await supabaseClient.auth.signUp({
         email: userEmail,
         password: userPassword,
-    });
+        options: {
+            emailRedirectTo: window.location.origin + '/LOGIN/return.html',
+        }
+    })
 
     if (error) {
-        console.error("Ошибка:", error.message);
-        alert("Failed: " + error.message);
+        console.error("Register Fail: ", error.message);
+        alert("Error: " + error.message);
     } else {
         localStorage.setItem('savedEmailForLogin', userEmail);
-        
+
         emailInput.value = '';
         passwordInput.value = '';
 
