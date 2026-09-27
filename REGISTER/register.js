@@ -26,7 +26,7 @@ registerForm.addEventListener('submit', async function(event) {
         email: userEmail,
         password: userPassword,
         options: {
-            emailRedirectTo: window.location.origin + '/LOGIN/return.html',
+            emailRedirectTo: window.location.origin + '/LOGIN/reg-complete.html',
         }
     })
 
